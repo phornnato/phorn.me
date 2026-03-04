@@ -1,0 +1,179 @@
+/* ===== CONTACT PAGE ===== */
+.contact-page {
+  position: relative;
+  padding-top: 7rem;
+  overflow: hidden;
+}
+.contact-hero {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 5% 3.5rem;
+}
+.contact-title {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-weight: 800;
+  margin: 1rem 0 1.25rem;
+  letter-spacing: -.02em;
+}
+.contact-sub {
+  font-size: 1.05rem;
+  color: var(--muted);
+  max-width: 520px;
+  line-height: 1.7;
+}
+
+/* Layout */
+.contact-layout {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5% 6rem;
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 2rem;
+  align-items: start;
+}
+@media (max-width: 900px) {
+  .contact-layout { grid-template-columns: 1fr; }
+}
+
+/* Form */
+.contact-form {
+  border-radius: 24px;
+  padding: 2.5rem;
+}
+.form-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  font-family: var(--font-head);
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+@media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } }
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  margin-bottom: 1.25rem;
+}
+.form-group label {
+  font-size: .8rem;
+  font-weight: 600;
+  color: var(--muted);
+  letter-spacing: .05em;
+  text-transform: uppercase;
+}
+.form-group input,
+.form-group textarea {
+  background: rgba(255,255,255,.04);
+  border: 1.5px solid var(--border);
+  border-radius: 12px;
+  padding: .85rem 1rem;
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: .95rem;
+  outline: none;
+  transition: border-color .2s, box-shadow .2s;
+  resize: vertical;
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder { color: rgba(240,240,255,.25); }
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(59,130,246,.15);
+}
+
+.submit-btn {
+  width: 100%;
+  justify-content: center;
+  padding: 1rem;
+  font-size: 1rem;
+  margin-top: .5rem;
+}
+.submit-btn:disabled { opacity: .6; cursor: wait; }
+
+.form-error {
+  font-size: .85rem;
+  color: #f87171;
+  background: rgba(248,113,113,.1);
+  border: 1px solid rgba(248,113,113,.25);
+  border-radius: 10px;
+  padding: .75rem 1rem;
+  margin-bottom: .75rem;
+}
+
+/* Success */
+.success-msg {
+  border-radius: 24px;
+  padding: 3rem 2.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.success-emoji { font-size: 4rem; }
+.success-msg h3 { font-size: 1.5rem; font-family: var(--font-head); font-weight: 700; }
+.success-msg p  { color: var(--muted); max-width: 340px; line-height: 1.6; }
+
+/* Aside */
+.contact-aside { display: flex; flex-direction: column; gap: 1.25rem; }
+.aside-card {
+  border-radius: 20px;
+  padding: 1.75rem;
+}
+.aside-title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  font-family: var(--font-head);
+}
+
+/* Socials */
+.socials-list { display: flex; flex-direction: column; gap: .75rem; }
+.social-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: .9rem 1rem;
+  border-radius: 14px;
+  text-decoration: none;
+  transition: transform .25s, border-color .25s;
+  position: relative;
+}
+.social-item:hover {
+  transform: translateX(4px);
+  border-color: rgba(255,255,255,.12);
+}
+.social-icon  { font-size: 1.4rem; }
+.social-label { font-size: .85rem; font-weight: 700; color: var(--sc, var(--white)); }
+.social-handle{ font-size: .78rem; color: var(--muted); margin-top: .1rem; }
+.social-arrow {
+  margin-left: auto;
+  color: var(--muted);
+  font-size: .9rem;
+  transition: color .25s, transform .25s;
+}
+.social-item:hover .social-arrow {
+  color: var(--sc, var(--white));
+  transform: translateX(3px);
+}
+
+/* Availability */
+.avail-row {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  margin-bottom: .75rem;
+}
+.avail-text { font-size: .9rem; font-weight: 600; color: var(--cyan); }
+.avail-note {
+  font-size: .85rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
